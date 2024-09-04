@@ -24,8 +24,19 @@ jobs:
     - name: Build project
       run: npm run build
 
+    - name: Clear Git cache
+      run: |
+        rm -rf .git
+        git init
+
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist  # Change this to the directory where your build files are located
+        
+    - name: Debug information
+      run: |
+        git status
+        git remote -v
+        git branch -a
