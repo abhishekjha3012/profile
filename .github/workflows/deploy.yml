@@ -21,31 +21,11 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Print Git configuration
-      run: |
-        git config --list
-        git remote -v
-
-    - name: Delete gh-pages branch
-      run: |
-        git push origin --delete gh-pages || true
-
     - name: Build project
       run: npm run build
-
-    - name: Clear Git cache
-      run: |
-        rm -rf .git
-        git init
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist  # Change this to the directory where your build files are located
-        
-    - name: Debug information
-      run: |
-        git status
-        git remote -v
-        git branch -a
+        publish_dir: ./dist

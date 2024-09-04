@@ -1,113 +1,24 @@
-# Node.js
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
 # Logs
 logs
 *.log
-pids
-*.pid
-*.seed
-*.pid.lock
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Dependency directories
-node_modules/
-jspm_packages/
-bower_components/
+node_modules
+dist
+dist-ssr
+*.local
 
-# Build directories
-dist/
-build/
-out/
-coverage/
-.tmp/
-temp/
-
-# Package files
-*.tgz
-*.zip
-*.7z
-
-# OS-specific files
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
 .DS_Store
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-.vscode/
-.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
-*.swp
-
-# Editor-specific files
-.vscode/
-.idea/
-*.sublime-workspace
-*.sublime-project
-
-# Environment variables
-.env
-.env.*.local
-
-# Lock files
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
-
-# Temporary files
-*.tmp
-*.temp
-*.swp
-*.bak
-*.orig
-
-# Coverage
-coverage/
-*.lcov
-
-# Test and Debugging
-.nyc_output/
-.debug/
-.vscode/
-
-# Compiled files
-*.class
-*.dll
-*.exe
-*.out
-*.o
-
-# Generated files
-*.log
-*.patch
-*.diff
-*.err
-*.rej
-*.orig
-*.bak
-*.swp
-*.swm
-*.temp
-
-# IDE specific
-.vscode/
-.idea/
-*.sublime-workspace
-*.sublime-project
-
-# Python
-__pycache__/
-*.pyc
-*.pyo
-
-# Ruby
-*.gem
-*.rbc
-.bundle/
-vendor/bundle/
-log/
-tmp/
+*.sw?
