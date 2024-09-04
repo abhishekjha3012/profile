@@ -21,6 +21,15 @@ jobs:
     - name: Install dependencies
       run: npm install
 
+    - name: Print Git configuration
+      run: |
+        git config --list
+        git remote -v
+
+    - name: Delete gh-pages branch
+      run: |
+        git push origin --delete gh-pages || true
+
     - name: Build project
       run: npm run build
 
